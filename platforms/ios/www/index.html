@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <link rel="stylesheet" type="text/css" href="css/onsenui.css" />
+        <link rel="stylesheet" type="text/css" href="css/onsen-css-components.css" />
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+
+
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/angular.min.js"></script>
+        <script type="text/javascript" src="js/onsenui.js"></script>
+        <script type="text/javascript" src="js/angular-onsenui.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="js/string.js"></script>
+        <script type="text/javascript" src="js/app.js"></script>
+
+
+        <title>Hello World</title>
+    </head>
+    <body ng-app="myApp" class="blink" ng-controller="myCtrl">
+        <ons-navigator id="myNavigator" page="homePage"></ons-navigator>
+            <template id="homePage">
+                <ons-page id="deviceready">
+                    <ons-toolbar>
+
+                        <div class="right">
+                            <ons-toolbar-button ng-click="menu.toggleMenu()" modifier="material">
+                                <span>{{title}}</span>
+                            </ons-toolbar-button>
+                        </div>
+
+                    </ons-toolbar>
+
+
+                    <ons-tabbar>
+                        <ons-tab label="تب ۳" icon="ion-checkmark-round" page="page3.html">
+                        </ons-tab>
+                        <ons-tab label="تب ۲" icon="ion-ios-calendar-outline" page="page2.html">
+                        </ons-tab>
+                        <ons-tab label="تب ۱" icon="ion-compose" page="page1.html" active="true">
+                        </ons-tab>
+
+
+                        <ons-speed-dial position="bottom right" direction="up">
+                            <ons-fab>
+                                <ons-icon icon="md-assignment-o"></ons-icon>
+                            </ons-fab>
+
+                            <div>
+                                <ons-speed-dial-item class="refreshT" ng-click="refresh()">
+                                    <ons-icon icon="md-refresh-sync"></ons-icon>
+                                </ons-speed-dial-item>
+                            </div>
+
+                            <div>
+                                <ons-speed-dial-item class="loadmoreT" ng-click="loadMore()">
+                                    <ons-icon icon="md-plus-circle-o"></ons-icon>
+                                </ons-speed-dial-item>
+                            </div>
+
+                            <div>
+                                <ons-speed-dial-item ng-click="searchPopup()">
+                                    <ons-icon icon="md-search"></ons-icon>
+                                </ons-speed-dial-item>
+                            </div>
+
+
+                        </ons-speed-dial>
+                    </ons-tabbar>
+                </ons-page>
+            </template>
+
+
+            <ons-template id="page1.html">
+
+                <ons-page id="page1" class="rtl">
+                    <h2 class="custom-padding"><ons-icon icon="ion-compose"></ons-icon> تب ۱ </h2>
+
+                </ons-page>
+
+            </ons-template>
+            <ons-template id="page2.html">
+
+                <ons-page id="page2" class="rtl">
+                    <h2 class="custom-padding"><ons-icon icon="ion-compose"></ons-icon> تب ۲ </h2>
+                </ons-page>
+
+            </ons-template>
+            <ons-template id="page3.html">
+
+                    <ons-page id="page2" class="rtl">
+                        <h2 class="custom-padding"><ons-icon icon="ion-compose"></ons-icon> تب ۳ </h2>
+                    </ons-page>
+
+            </ons-template>
+
+
+    </body>
+</html>
