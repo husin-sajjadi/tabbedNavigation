@@ -8,8 +8,6 @@ One Code, Two Platform!
 --------------
 This application will run on Android and iOS
 
-![Alt Text](http://stutteringapk.ir/git/bottomnavigation.png)
-
 Folders
 -------------
 config.xml
